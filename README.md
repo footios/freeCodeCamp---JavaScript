@@ -3,9 +3,14 @@ Here are my solutions to the challenges. They are not the best, but they show my
 
 ## Basic Algorithm Scripting
 
+> Basic Algorithm Scripting: Return Largest Numbers in Arrays
+> Return an array consisting of the largest number from each provided sub-array. 
 ```
+// I didn't get the question right.
+// The function should return an array with the largest numbers
+// of each subarray.
 // This one returns the subarray
-    // that has the largest number.
+// that has the largest number.
     function largestOfFour(arr) {
       // You can do this!
       let max = 0;
