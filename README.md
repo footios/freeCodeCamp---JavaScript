@@ -190,7 +190,7 @@ Check if a string (first argument, str) ends with the given target string (secon
     }
     console.log('result ', confirmEnding("Congratulation", "on"));
 ```
-Truncate a String
+# Truncate a String
 Truncate a string (first argument) 
 if it is longer than the given maximum string length (second argument). 
 Return the truncated string with a ... ending.
@@ -199,9 +199,11 @@ Return the truncated string with a ... ending.
 // This time without even a hint.
 // I did google for converting an array to a 
 // string and I got the join() function
+
     function repeatStringNumTimes(str, num) {
       // repeat after me
       var arr = [];
+      
       if (num < 0) {
         return '';
       } else {
