@@ -102,6 +102,7 @@ Return an array consisting of the largest number from each provided sub-array.
       ]));
 ```
 
+```
 // FCC solution
     // Intermediate Code Solution:
     //(Declarative approach)
@@ -130,11 +131,12 @@ Return an array consisting of the largest number from each provided sub-array.
         [1000000, 1001, 857, 1]
       ]));
 
-
+```
 // FCC solution
     //  Advanced Code Solution:
     //  (Declarative approach)
 ```
+
     /*
     First we iterate over the array of arrays with the map function.
     Then we need a fun to apply it to every element of the map
