@@ -101,3 +101,66 @@ Return an array consisting of the largest number from each provided sub-array.
         [1000000, 1002221, 857, 1]
       ]));
 ```
+
+## // FCC solution
+    // Intermediate Code Solution:
+    //(Declarative approach)
+    /* As we see the 'map' fun first groups all the
+    subarrays. Then the 'reduce' checks which number
+    is larger and returns the largest one.
+    And because map returns an array, the returned
+    value is an array.
+    */
+    function largestOfFour(arr) {
+      return arr.map(function(group) {
+        //  console.log(group);
+        return group.reduce(function(prev, current) {
+          //console.log('p ', prev, 'c ', current);
+          return (current > prev) ? current : prev;
+        });
+      });
+    }
+
+
+    console.log('result ', largestOfFour(
+      [
+        [4, 9, 1, 3],
+        [13, 35, 18, 26],
+        [32, 35, 97, 39],
+        [1000000, 1001, 857, 1]
+      ]));
+
+
+## FCC solution
+    //  Advanced Code Solution:
+    //  (Declarative approach)
+```
+    /*
+    First we iterate over the array of arrays with the map function.
+    Then we need a fun to apply it to every element of the map
+    that gives us the max num.
+    The Math.max does not take an array as input.
+    But the apply() does.
+    Math.max.apply(null, [9, 43, 20, 6])
+    Note! With apply you can provide a context
+    to work on, which will be the value of 'this'.
+    But here we don't need a context, so we use null.
+    Another thing with apply, is that it doesn't return an array,
+    that's why Math.max accepts apply's output.
+    So, with the apply method
+    we get the elements from the map fun and then
+    we 'bind' these elements to the Math.max, which returns
+    the max number to the map fun, which then returns
+    the array with all the max numbers.
+    */
+    function largestOfFour(arr) {
+      return arr.map(Function.apply.bind(Math.max, null));
+    }
+    console.log('result ', largestOfFour(
+      [
+        [4, 9, 1, 3],
+        [13, 35, 18, 26],
+        [32, 35, 97, 39],
+        [1000000, 1001, 857, 1]
+      ]));
+ ```
