@@ -1,4 +1,4 @@
-# freeCodeCamp Basic Algorithm Scripting: Return Largest Numbers in Arrays
+# freeCodeCamp 
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
 ## Basic Algorithm Scripting
@@ -164,3 +164,24 @@ Return an array consisting of the largest number from each provided sub-array.
         [1000000, 1001, 857, 1]
       ]));
  ```
+# Confirm the Ending
+Check if a string (first argument, str) ends with the given target string (second argument, target).
+```
+  // WE DID IT!!!!!!!!!
+    // I did got a hind to use the slice function
+    
+    function confirmEnding(str, target) {
+      // "Never give up and good luck will find you."
+      // -- Falcor
+      var str2, str3 = '';
+      for (var i = 0; i < str.length; i++) {
+        str2 = str.slice(-target.length, str.length);
+        if (str2 === target) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+    console.log('result ', confirmEnding("Congratulation", "on"));
+```
