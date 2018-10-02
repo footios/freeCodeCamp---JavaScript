@@ -1,4 +1,4 @@
-# freeCodeCamp
+# freeCodeCamp Basic Algorithm Scripting: Return Largest Numbers in Arrays
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
 ## Basic Algorithm Scripting
@@ -46,8 +46,8 @@ Here are my solutions to the challenges. They are not the best, but they show my
 Basic Algorithm Scripting: Return Largest Numbers in Arrays
 Return an array consisting of the largest number from each provided sub-array.
 ```
-  //Now it's working, but i show the solution
-    // and the main mistake (if not the lonly one)
+  //Now it's working, but I show the solution
+    // and the main mistake 
     // was the position of
     // sub2.push(max);
     function largestOfFour(arr) {
