@@ -1,4 +1,4 @@
-# freeCodeCamp 
+# freeCodeCamp  Challenges
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
 ## Basic Algorithm Scripting
@@ -132,13 +132,11 @@ Return an array consisting of the largest number from each provided sub-array.
       ]));
 
 ```
-// FCC solution
+
+```
+    // FCC solution
     //  Advanced Code Solution:
     //  (Declarative approach)
-```
-
-
-
 
     /*
     First we iterate over the array of arrays with the map function.
@@ -169,7 +167,7 @@ Return an array consisting of the largest number from each provided sub-array.
         [1000000, 1001, 857, 1]
       ]));
  ```
-# Confirm the Ending
+## Confirm the Ending
 Check if a string (first argument, str) ends with the given target string (second argument, target).
 ```
   // WE DID IT!!!!!!!!!
