@@ -69,10 +69,12 @@ Return an array consisting of the largest number from each provided sub-array.
        second for loop, we would push every max number
        we would get. That's why we put just outside it.
 
-       My question is why the second for loop iterates
+        So the second for loop iterates
        over the first sub array and then jumbs back to first
-       for loop and starts iterating over the second
-       sub array?
+       for loop, and starts iterating over the second
+       sub array. That happens because it's inside the first for loop.
+       That means that when i gets a value, then the second
+       for loop gives us all the values for that i.length.
 
        Note! The funny thing here is that the second for loop
        works the same even if we do arr.lenght instead
