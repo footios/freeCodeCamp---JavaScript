@@ -137,6 +137,9 @@ Return an array consisting of the largest number from each provided sub-array.
     //  (Declarative approach)
 ```
 
+
+
+
     /*
     First we iterate over the array of arrays with the map function.
     Then we need a fun to apply it to every element of the map
@@ -186,4 +189,29 @@ Check if a string (first argument, str) ends with the given target string (secon
       }
     }
     console.log('result ', confirmEnding("Congratulation", "on"));
+```
+Truncate a String
+Truncate a string (first argument) 
+if it is longer than the given maximum string length (second argument). 
+Return the truncated string with a ... ending.
+```
+// And we did it again !!!
+// This time without even a hint.
+// I did google for converting an array to a 
+// string and I got the join() function
+    function repeatStringNumTimes(str, num) {
+      // repeat after me
+      var arr = [];
+      if (num < 0) {
+        return '';
+      } else {
+        for (var i = 0; i < num; i++) {
+          arr.push(str);
+        }
+        return arr.join('');
+      }
+    }
+    console.log(repeatStringNumTimes("*", 8));
+
+
 ```
