@@ -102,7 +102,7 @@ Return an array consisting of the largest number from each provided sub-array.
       ]));
 ```
 
-## // FCC solution
+// FCC solution
     // Intermediate Code Solution:
     //(Declarative approach)
     /* As we see the 'map' fun first groups all the
@@ -131,7 +131,7 @@ Return an array consisting of the largest number from each provided sub-array.
       ]));
 
 
-## FCC solution
+// FCC solution
     //  Advanced Code Solution:
     //  (Declarative approach)
 ```
