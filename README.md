@@ -1,20 +1,22 @@
 # freeCodeCamp  Challenges
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
-* [Basic Algorithm Scripting](#BasicAlgo)
-    * [Return Largest Numbers in Arrays](#ReturnL)
-    * [Repeat a String Repeat a String](#RepeatS)
+* [Basic Algorithm Scripting](#basicAlgo)
+    * [Return Largest Numbers in Arrays](#returnL)
+    * [Confirm Ending](#confirmE)
+    * [Repeat a String Repeat a String](#repeatS)
     * [Truncate a String](#truncateS) 
     * [Finders Keepers](#findK)
+    
 
 
 
 
 
 
-## <a name="BasicAlgo"/> Basic Algorithm Scripting
+## <a name="basicAlgo"/> Basic Algorithm Scripting
 
-# <a name="ReturnL"/> Return Largest Numbers in Arrays
+# <a name="returnL"/> Return Largest Numbers in Arrays
 * Return an array consisting of the largest number from each provided sub-array. 
 ```
 // I didn't get the question right.
@@ -178,7 +180,7 @@ Return an array consisting of the largest number from each provided sub-array.
         [1000000, 1001, 857, 1]
       ]));
  ```
-## Confirm the Ending
+## <a name="confirmE"/>Confirm the Ending
 Check if a string (first argument, str) ends with the given target string (second argument, target).
 ```
   // WE DID IT!!!!!!!!!
