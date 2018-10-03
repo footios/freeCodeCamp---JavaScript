@@ -10,7 +10,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
 
 ## <a name="BasicAlgo"/> Basic Algorithm Scripting
 
-* Basic Algorithm Scripting: Return Largest Numbers in Arrays
+# Return Largest Numbers in Arrays
 * Return an array consisting of the largest number from each provided sub-array. 
 ```
 // I didn't get the question right.
@@ -50,7 +50,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
   </script>
 ```
 
-Basic Algorithm Scripting: Return Largest Numbers in Arrays
+# Return Largest Numbers in Arrays
 Return an array consisting of the largest number from each provided sub-array.
 ```
   //Now it's working, but I show the solution
@@ -250,5 +250,35 @@ Return the truncated string with a ... ending.
     console.log('result ', truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
 
 ```
+ 
+   # Finders Keepers
+    Create a function that looks through an array (first argument)
+    and returns the first element in the array that passes a truth test
+    (second argument).
+    If no element passes the test, return undefined.
 
+    Yes we did it again, without even a hint.
+    Note in the code below this:( func(arr[i]) === true)
+    is not needed. I could just do this:
+    (func(arr[i])).
+    Moreover I could just assign the arr[i] to num and return it.
+    If there was no match 'undefined' would return by default.
+    Well not literly. It just returns nothing.
+   
+   ```
+    function findElement(arr, func) {
+      let num = 0;
+      for (let i = 0; i < arr.length; i++) {
+        console.log(func(arr[i]));
+        if (func(arr[i]) === true) {
+          return num = arr[i] ? arr[i] : 'undefined';
+          console.log(num);
+        }
+      }
+    }
+
+    console.log(findElement([1, 3, 8, 9], function(num) {
+      return num % 2 === 0;
+    }));
+    ```
 
