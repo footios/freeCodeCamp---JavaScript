@@ -7,6 +7,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Repeat a String Repeat a String](#repeatS)
     * [Truncate a String](#truncateS) 
     * [Finders Keepers](#findK)
+    * [Check for boolean](#checkBoolean)
     
 
 
@@ -288,9 +289,9 @@ Return the truncated string with a ... ending.
     console.log(findElement([1, 3, 8, 9], function(num) {
       return num % 2 === 0;
     }));
-    ```
+```
 
-  ## Boo who. Check if a value is classified as a boolean primitive.
+  ## <a name="checkBoolean"/> Boo who. Check if a value is classified as a boolean primitive.
        
  ```
      Return true or false.
