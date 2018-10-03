@@ -1,4 +1,4 @@
-# freeCodeCamp  Challenges
+## freeCodeCamp  Challenges
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
 * [Basic Algorithm Scripting](#basicAlgo)
