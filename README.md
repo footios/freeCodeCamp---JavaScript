@@ -2,6 +2,10 @@
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
 * [Basic Algorithm Scripting](#BasicAlgo)
+    * [Return Largest Numbers in Arrays](#ReturnL)
+    * [Repeat a String Repeat a String](#RepeatS)
+    * [Truncate a String](#truncateS) 
+    * [Finders Keepers](#findK)
 
 
 
@@ -10,7 +14,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
 
 ## <a name="BasicAlgo"/> Basic Algorithm Scripting
 
-# Return Largest Numbers in Arrays
+# <a name="ReturnL"/> Return Largest Numbers in Arrays
 * Return an array consisting of the largest number from each provided sub-array. 
 ```
 // I didn't get the question right.
@@ -195,7 +199,7 @@ Check if a string (first argument, str) ends with the given target string (secon
     }
     console.log('result ', confirmEnding("Congratulation", "on"));
 ```
-# Repeat a String Repeat a String
+# <a name="repeatS"/> Repeat a String Repeat a String
 Truncate a string (first argument) 
 if it is longer than the given maximum string length (second argument). 
 Return the truncated string with a ... ending.
@@ -223,7 +227,7 @@ Return the truncated string with a ... ending.
     console.log(repeatStringNumTimes("*", 8));
 
 ```
-# Truncate a String
+# <a name="truncateS"/> Truncate a String
 ```
   // We need to reduce the length of the string or truncate it 
     // if it is longer than the given maximum lengths specified 
@@ -251,7 +255,7 @@ Return the truncated string with a ... ending.
 
 ```
  
-   # Finders Keepers
+   # <a name="findK"/>Finders Keepers
     Create a function that looks through an array (first argument)
     and returns the first element in the array that passes a truth test
     (second argument).
