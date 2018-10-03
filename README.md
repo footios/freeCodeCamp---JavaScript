@@ -1,7 +1,14 @@
 # freeCodeCamp  Challenges
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 
-## Basic Algorithm Scripting
+* [Basic Algorithm Scripting](#BasicAlgo)
+
+
+
+
+
+
+## <a name="BasicAlgo"/> Basic Algorithm Scripting
 
 * Basic Algorithm Scripting: Return Largest Numbers in Arrays
 * Return an array consisting of the largest number from each provided sub-array. 
