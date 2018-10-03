@@ -290,3 +290,39 @@ Return the truncated string with a ... ending.
     }));
     ```
 
+  ## Boo who. Check if a value is classified as a boolean primitive.
+       
+ ```
+     Return true or false.
+     This one doesn't work with arrays
+    function booWho(bool) {
+      // What is the new fad diet for ghost developers? The Boolean.
+
+      return Number.isInteger(bool) ? false : bool ? true : false
+    }
+    console.log(booWho(false));
+
+    
+    This is one does the job. YES !!!
+        function booWho(bool) {
+          // What is the new fad diet for ghost developers? The Boolean.
+          if (bool === true || bool === false) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        console.log(booWho({
+          "a": 1
+       }));
+ ```
+```
+    FCC Solution
+    function booWho(bool) {
+          return typeof bool === 'boolean';
+        }
+
+        // test here
+        booWho(null);
+```
