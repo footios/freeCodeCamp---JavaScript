@@ -272,6 +272,8 @@ Return the truncated string with a ... ending.
     Well not literly. It just returns nothing.
    
    ```
+   
+   // FCC solution
     function findElement(arr, func) {
       let num = 0;
       for (let i = 0; i < arr.length; i++) {
