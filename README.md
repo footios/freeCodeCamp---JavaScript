@@ -329,11 +329,14 @@ Return the truncated string with a ... ending.
         booWho(null);
 ```
 
-## <a name="titleCase"/> Title Case a Sentence
+## <a name="titleCase"/> Title Case a Sentence [FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence)
 Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
 
+I got a lot of help from Randell Dawson.
+Here is the topic on the [forum.](https://www.freecodecamp.org/forum/t/title-case-a-sentence-is-there-any-chance-for-this-code-to-work/231456/7)
+
 ```
-  // This one works, but I use the replace method, not slice.
+  // This one is with the replace method.
         function titleCase(str) {
 
           // make all leters toLowerCase and convert str to array
@@ -361,8 +364,6 @@ Return the provided string with the first letter of each word capitalized. Make 
 
 ```
 Second way. 
-I got a lot of help from Randell Dawson.
-Here is the topic on the [forum.](https://www.freecodecamp.org/forum/t/title-case-a-sentence-is-there-any-chance-for-this-code-to-work/231456/7)
 
 ```
   // this one is with slice
@@ -394,4 +395,4 @@ Here is the topic on the [forum.](https://www.freecodecamp.org/forum/t/title-cas
     console.log('result: ', titleCase("sHoRt AnD sToUtt"));
     // result:  Short And Stoutt
 ```
-[FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence)
+
