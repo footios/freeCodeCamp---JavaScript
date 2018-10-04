@@ -327,3 +327,70 @@ Return the truncated string with a ... ending.
         // test here
         booWho(null);
 ```
+
+## <a name="titleCase"/> Title Case a Sentence
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+```
+  // This one works, but I use the replace method, not slice.
+        function titleCase(str) {
+
+          // make all leters toLowerCase and convert str to array
+          let arr = str.toLowerCase().split(' ');
+          let arr1 = []
+
+          for (var i = 0; i < arr.length; i++) {
+
+
+            console.log('each word ', arr[i]);
+            console.log('first letter ', arr[i].charAt(0));
+            console.log('first letter capitalized ', arr[i].charAt(0).toUpperCase());
+
+            // On each word replace the first letter with a capitalized one.
+            arr1.push(arr[i].replace(arr[i].charAt(0), arr[i].charAt(0).toUpperCase()));
+
+
+            console.log(arr1);
+
+          }
+
+          return arr1.join(' ');
+        }
+        console.log('result: ', titleCase("I'm a little tea pot"));
+
+```
+Second way. 
+I got a lot of help from Randell Dawson.
+Here is the topic on the [forum.](https://www.freecodecamp.org/forum/t/title-case-a-sentence-is-there-any-chance-for-this-code-to-work/231456/7)
+
+```
+  // this one is with slice
+    function titleCase(str) {
+
+      // make all leters toLowerCase and convert str to array
+      let arr = str.toLowerCase().split(' ');
+
+      let arr2 = []
+      for (let i = 0; i < arr.length; i++) {
+
+        var firstLetter = arr[i][0].toUpperCase();
+        //console.log(firstLetter);
+
+        // slice the rest of the arr[i] word
+        var restOfWord = arr[i].slice(1);
+        //console.log(restOfWord);
+
+        arr2.push(firstLetter += restOfWord);
+        //console.log('FL ', firstLetter);
+
+      }
+
+      // concat the two arrays
+      return arr2.join(' ');
+
+    }
+
+    console.log('result: ', titleCase("sHoRt AnD sToUtt"));
+    // result:  Short And Stoutt
+```
+[FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence)
