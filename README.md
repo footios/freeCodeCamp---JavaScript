@@ -8,6 +8,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Truncate a String](#truncateS) 
     * [Finders Keepers](#findK)
     * [Check for boolean](#checkBoolean)
+    * [Title Case a Sentence](#titleCase)
     
 
 
