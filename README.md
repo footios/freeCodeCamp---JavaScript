@@ -424,7 +424,7 @@ Second way.
     
     console.log(frankenSplice([1, 2], ["a", "b"], 1));
 ```
-FCC Solution
+FCC Solution.
 That's what I was trying to do in the first place,
 but I was iterating in the second array
     
