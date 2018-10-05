@@ -446,3 +446,18 @@ function frankenSplice(arr1, arr2, n) {
     
     console.log(frankenSplice([1, 2], ["a", "b"], 1));
  ```
+  Another nice way found in the forum
+    That's what I was trying to do in the first place,
+    but instead of ...arr1, I was using
+    1.  [...arr1]
+    2. newArr.splice(n, 0, arr1.slice(0));
+    So I was getting the array as a whole.
+```
+  function frankenSplice(arr1, arr2, n) {
+      // It's alive. It's alive!
+      var newArr = arr2.slice(0);
+      newArr.splice(n, 0, ...arr1); // also works ...arr1
+      return newArr;
+    }
+    console.log(frankenSplice([1, 2], ["a", "b"], 1));
+```
