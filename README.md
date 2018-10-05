@@ -9,6 +9,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Finders Keepers](#findK)
     * [Check for boolean](#checkBoolean)
     * [Title Case a Sentence](#titleCase)
+    * [Slice and Splice](#sliceSplice)
     
 
 
@@ -394,5 +395,54 @@ Second way.
 
     console.log('result: ', titleCase("sHoRt AnD sToUtt"));
     // result:  Short And Stoutt
-```
 
+```
+  ## <a name="sliceSplice"/> Slice and Splice
+    You are given two arrays and an index.
+    Use the array methods slice and splice to copy each
+    element of the first array into the second array, in order.
+    Begin inserting elements at index n of the second array.
+    Return the resulting array.
+    The input arrays should remain the same after the function runs.
+
+    First solution (without a hint).
+    But, I found the way to flatten the result array
+    from the internet. 
+
+```
+    function frankenSplice(arr1, arr2, n) {
+      // It's alive. It's alive!
+      let arr3 = [...arr2];
+      let arr4 = [];
+    
+      arr3.splice(n, 0, arr1.slice(0))
+      arr4 = [].concat.apply([], arr3)
+      console.log(arr3);
+    
+      return arr4;
+    }
+    
+    console.log(frankenSplice([1, 2], ["a", "b"], 1));
+```
+FCC Solution
+That's what I was trying to do in the first place,
+but I was iterating in the second array
+    
+    
+```
+function frankenSplice(arr1, arr2, n) {
+      // It's alive. It's alive!
+      let arr3 = [...arr2];
+      let arr4 = [];
+      
+      for (var i = 0; i < arr1.length; i++) {
+        arr3.splice(n, 0, arr1[i])
+    
+      }
+      console.log(arr3);
+    
+      return arr3;
+    }
+    
+    console.log(frankenSplice([1, 2], ["a", "b"], 1));
+ ```
