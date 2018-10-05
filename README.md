@@ -10,6 +10,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Check for boolean](#checkBoolean)
     * [Title Case a Sentence](#titleCase)
     * [Slice and Splice](#sliceSplice)
+    * [Falsy Bouncer](#falsyBouncer)
     
 
 
@@ -460,4 +461,33 @@ function frankenSplice(arr1, arr2, n) {
       return newArr;
     }
     console.log(frankenSplice([1, 2], ["a", "b"], 1));
+```
+
+  # Falsy Bouncer <a name="falsyBouncer"/> 
+    Remove all falsy values from an array.
+    Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+    Hint: Try converting each value to a Boolean.
+```
+    // Got it in a few minutes! ;)
+    function bouncer(arr) {
+      // Don't show a false ID to this bouncer.
+      let arr1 = [];
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i]) {
+          arr1.push(arr[i])
+        }
+      }
+      return arr1;
+    }
+  console.log('result', bouncer([7, "ate", "", false, 9]));
+    // result (3) [7, "ate", 9]
+```
+
+  FCC Advanced Solution
+```
+    function bouncer(arr) {
+      return arr.filter(Boolean);
+    }
+    console.log('result', bouncer([7, "ate", "", false, 9]));
 ```
