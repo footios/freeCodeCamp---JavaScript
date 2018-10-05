@@ -496,6 +496,9 @@ function frankenSplice(arr1, arr2, n) {
  ## <a name="whereBelong"/> Where do I Belong [FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/)
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
 For ex. getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+There are more siple solutions in FCC/
+I always try to hard to be smart, I quess.
+Or is it because I'm new to programming.
    
 ```
     function getIndexToIns(arr, num) {
@@ -556,6 +559,7 @@ For ex. getIndexToIns([20,3,5], 19) should return 2 because once the array has b
           output.push(num)
         }
       }
+       // check if the array is finished
       if (output.indexOf(num) === -1) {
         output.push(num)
       }
