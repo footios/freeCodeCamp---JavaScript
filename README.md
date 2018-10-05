@@ -11,6 +11,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Title Case a Sentence](#titleCase)
     * [Slice and Splice](#sliceSplice)
     * [Falsy Bouncer](#falsyBouncer)
+    * [Where do I belong](#whereBelong)
     
 
 
@@ -491,3 +492,78 @@ function frankenSplice(arr1, arr2, n) {
     }
     console.log('result', bouncer([7, "ate", "", false, 9]));
 ```
+
+ ## <a name="whereBelong"/> Where do I Belong [FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/)
+Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+For ex. getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+   
+```
+    function getIndexToIns(arr, num) {
+      // Find my place in this sorted array.
+      // Found a way in stackOverflow to sort an array in a for loop
+      let output = [];
+      for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < i; j++) { // first time see this
+          if (arr[i] < arr[j]) {
+            var temp = arr[i]; // very nice trick the rest
+            arr[i] = arr[j];
+            arr[j] = temp
+          }
+        }
+        //  console.log(arr);
+      }
+      // get the index of num
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < num) {
+          output.push(arr[i]);
+        } else {
+          output.push(num)
+        }
+      }
+      if (output.indexOf(num) === -1) {
+        output.push(num)
+      }
+      console.log(output);
+      console.log(output.indexOf(num));
+      return output.indexOf(num);
+    }
+
+    console.log(getIndexToIns([2, 5, 10], 15));
+    output: 3
+    ```
+    
+    ```
+      // using the sort method
+    function getIndexToIns(arr, num) {
+
+      let output = [];
+      // Find my place in this sorted array.
+      arr.sort(function CompareForSort(first, second) {
+        if (first == second)
+          return 0;
+        if (first < second)
+          return -1;
+        else
+          return 1;
+      });
+
+
+      // get the index of num
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < num) {
+          output.push(arr[i]);
+        } else {
+          output.push(num)
+        }
+      }
+      if (output.indexOf(num) === -1) {
+        output.push(num)
+      }
+      console.log(output);
+      console.log(output.indexOf(num));
+      return output.indexOf(num);
+    }
+
+    console.log(getIndexToIns([2, 5, 10], 15));
+    // output 3
+    ```
