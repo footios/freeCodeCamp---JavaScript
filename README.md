@@ -12,6 +12,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Slice and Splice](#sliceSplice)
     * [Falsy Bouncer](#falsyBouncer)
     * [Where do I belong](#whereBelong)
+    * [Mutations](#mutations)
     
 
 
@@ -570,4 +571,62 @@ Or is it because I'm new to programming.
 
     console.log(getIndexToIns([2, 5, 10], 15));
     // output 3
-    ```
+```
+ ## <a name="mutations"/>Mutations   
+
+```
+    // Return true if the string in the first element of
+    // the array contains all of the letters of the string
+    // in the second element of the array.
+    // For example, ["hello", "Hello"], should return true
+    // because all of the letters in the second string are present
+    // in the first, ignoring case.
+
+    // I DID AGAIN !!!
+    function mutation(arr) {
+
+      let arr1 = [...arr[0]];
+      let arr2 = [...arr[1]];
+      let counter = 0
+      for (var i = 0; i < arr2.length; i++) {
+        //console.log('arr2 = ', arr2[i]);
+
+        for (var j = 0; j < arr1.length; j++) {
+          //  console.log('arr1 = ', arr1[j]);
+          if (arr2[i].toUpperCase() === arr1[j].toUpperCase()) {
+            counter++
+            break;
+          }
+        }
+      }
+      console.log(counter);
+      console.log(arr2.length);
+      if (counter === arr2.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    console.log(mutation(["hello", "Heblo"]));
+// output: false
+```
+```
+    // FCC Solution
+    function mutation(arr) {
+      var test = arr[1].toLowerCase();
+      var target = arr[0].toLowerCase();
+
+      // Iterate over the second word 
+      // and check if each letter of it => test[i]
+      // is also an indexOf target, which is 
+      // the first word.If indexOf is not found 
+      // it returns -1. So...
+      for (var i = 0; i < test.length; i++) {
+        if (target.indexOf(test[i]) < 0)
+          return false;
+      }
+      return true;
+    }
+
+    console.log(mutation(["hello", "Heblo"]));
+```
