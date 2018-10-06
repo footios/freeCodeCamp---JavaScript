@@ -23,20 +23,6 @@ Spool up the FTL drive!
 # <a name="reverseString"/> Reverse String
 
 ```
-  function reverseString(str) {
-
-      let arr = []
-      console.log(str.length);
-      for (var i = str.length; i >= 0; i--) {
-        arr.push(str[i])
-        //console.log(arr);
-      }
-      return arr.join("");
-    }
-    console.log(reverseString("hello"));
-```
-
-```
 //I came up with this one with the help of the hinds
   function reverseString(str) {
 
@@ -50,6 +36,23 @@ Spool up the FTL drive!
 
     }
     console.log(reverseString("Greetings from Earth"));
+
+```
+
+```
+
+// When I did the repetion, I came up with this code:
+  function reverseString(str) {
+
+      let arr = []
+      console.log(str.length);
+      for (var i = str.length; i >= 0; i--) {
+        arr.push(str[i])
+        //console.log(arr);
+      }
+      return arr.join("");
+    }
+    console.log(reverseString("hello"));
 ```
 FCC Solutions
 
