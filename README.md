@@ -1,4 +1,4 @@
-# freeCodeCamp  Challenges
+# freeCodeCamp  Challenges <a name="goUp"/>
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
 Spool up the FTL drive!
 
@@ -633,7 +633,7 @@ Or is it because I'm new to programming.
     console.log(mutation(["hello", "Heblo"]));
 ```
 
-## <a name= "chunkyMonkey"/>Chunky Monkey
+## <a name= "chunkyMonkey"/>Chunky Monkey. [Go up](#goUp)
 [Click here to check the FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/)
 
 ```
@@ -647,24 +647,37 @@ Or is it because I'm new to programming.
       let chop = 0;
       let monkey = size
 
+      // iterate throu the array
       for (var i = 0; i < arr.length; i++) {
 
+        // make sure that second value of slice is less
+        // than the array's length
         if (monkey < arr.length) {
+
+          // chop the first piece
           newArr.push(arr.slice(chop, monkey));
           console.log(chop, ' ', monkey);
+
+          // increment the values of slice to chop the next piece.
           chop += size;
           monkey = chop + size;
-          i++;
           console.log(arr.length);
+
+          // if the second value of slice if bigger than the
+          // arr.length, then use the arr.length
         } else {
           newArr.push(arr.slice(chop, arr.length));
+
+          // The monkey value will exeed the arrays length
+          // So we need to break, so it will not output
+          // the last piece more times...
           break;
         }
       }
       return newArr;
     }
 
-    console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+    console.log(chunkArrayInGroups([0, 1, 2, 2, 2, 2, 3, 4, 5], 3));
 ```
 FCC Solution
 ```
