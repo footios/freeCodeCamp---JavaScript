@@ -634,7 +634,7 @@ Or is it because I'm new to programming.
 ```
 
 ## <a name= "chunkyMonkey"/>Chunky Monkey
-[FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/)
+[Click here to check the FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/)
 
 ```
     // Write a function that splits an array (first argument)
@@ -668,8 +668,7 @@ Or is it because I'm new to programming.
 ```
 FCC Solution
 ```
-// Nice and simple
-  
+   // Nice and simple
   function chunkArrayInGroups(arr, size) {
       // Break it up.
       var arr2 = [];
@@ -711,7 +710,7 @@ I feel stupid.
     console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
 ```
 
-An interesting one from the [forum](https://www.freecodecamp.org/forum/t/help-needed-in-chunky-monkey-problem/31907/4).
+An interesting one from the forum. [Click here to check the post](https://www.freecodecamp.org/forum/t/help-needed-in-chunky-monkey-problem/31907/4).
 I did put some comments for undestanding.
 
 ```
@@ -749,7 +748,7 @@ I did put some comments for undestanding.
 
     console.log(chunkArrayInGroups([0, 1, 68, 87, 8, 5], 4));
 ```
-Code with most likes in forum of [FCC](https://www.freecodecamp.org/forum/t/chunky-monkey-under-basic-algorithm-scripting-question/3838/6)
+Code with most likes in forum of FCC [Click here to check the post](https://www.freecodecamp.org/forum/t/chunky-monkey-under-basic-algorithm-scripting-question/3838/6)
 
 ```
     function chunkArrayInGroups(arr, size) {
