@@ -632,8 +632,9 @@ Or is it because I'm new to programming.
 
     console.log(mutation(["hello", "Heblo"]));
 ```
+[Go up](#goUp)
 
-## <a name= "chunkyMonkey"/>Chunky Monkey. [Go up](#goUp)
+## <a name= "chunkyMonkey"/>Chunky Monkey. 
 [Click here to check the FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/)
 
 ```
@@ -785,7 +786,7 @@ Code with most likes in forum of FCC [Click here to check the post](https://www.
 
     console.log(chunkArrayInGroups([0, 1, 68, 87, 8, 5], 4));
 ```
-
+[Go up](#goUp)
 
 
 
