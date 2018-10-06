@@ -17,10 +17,10 @@ Spool up the FTL drive!
     * [Mutations](#mutations)
     * [Chunky Monkey](#chunkyMonkey)
     
+# <a name="basicAlgo"/> Basic Algorithm Scripting
 
 
-
-# <a name="reverseString"/> Reverse String
+## <a name="reverseString"/> Reverse String
 
 ```
 //I came up with this one with the help of the hinds
@@ -62,7 +62,7 @@ function reverseString(str) {
 }
 ```
 
-# <a name="basicAlgo"/> Basic Algorithm Scripting
+
 
 ## <a name="returnL"/> Return Largest Numbers in Arrays
 * Return an array consisting of the largest number from each provided sub-array. 
