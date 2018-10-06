@@ -3,6 +3,8 @@ Here are my solutions to the challenges. They are not the best, but they show my
 Spool up the FTL drive!
 
 * [Basic Algorithm Scripting](#basicAlgo)
+    * [Find the Longest Word in a String] (#findLongest)
+    * [Factoralize number](#factoralize)
     * [Reverse string](#reverseString)
     * [Return Largest Numbers in Arrays](#returnL)
     * [Confirm Ending](#confirmE)
@@ -18,6 +20,24 @@ Spool up the FTL drive!
     * [Chunky Monkey](#chunkyMonkey)
     
 # <a name="basicAlgo"/> Basic Algorithm Scripting
+
+
+
+
+## <a name="factoralize"/> Factoralize number
+```
+  
+  function factorialize(num) {
+      if (num === 0) {
+        return 1;
+      }
+      num *= factorialize(num - 1)
+      
+      return num;
+    }
+
+    console.log(factorialize(5));
+```
 
 
 ## <a name="reverseString"/> Reverse String
@@ -61,8 +81,49 @@ function reverseString(str) {
   return str.split('').reverse().join('');
 }
 ```
+## <a name="findLongest"/> Find the Longest Word in a String
+Return the length of the longest word in the provided sentence.
+Your response should be a number.
+```
+      This is my first try.
+        function findLongestWordLength(str) {
+          let max = 0;
+          let tempArr = [];
+          let tempArr2 = [];
+          tempArr = str.split(' ');
+          //  console.log(tempArr);
+          for (var i = 0; i < tempArr.length; i++) {
+            //console.log(tempArr[i].length);
+            tempArr2.push(tempArr[i].length);
+            //console.log(tempArr2);
+            max = Math.max(...tempArr2)
+          }
 
+          return max;
+        }
+        console.log('max ', findLongestWordLength(
+          "The quick brown fox jumped over the lazy dog"));
+ 
+ // This is the second try at repetition time.
+ // It looks almost the same with the solution of FCC
+ // I didn't look at it. I just knew it!
+ 
+    function findLongestWordLength(str) {
 
+      let arr = str.split(" ");
+      let max = 0;
+      
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i].length > max) {
+          max = arr[i].length;
+        }
+        console.log(max);
+      }
+      return max;
+    }
+
+    console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+```
 
 ## <a name="returnL"/> Return Largest Numbers in Arrays
 * Return an array consisting of the largest number from each provided sub-array. 
@@ -101,18 +162,80 @@ function reverseString(str) {
         [32, 35, 97, 39],
         [1000000, 1001, 857, 1]
       ]));
-  </script>
+```
+```
+  
+           // And again in repetition i did the same mistake.
+          // I return the array with the largest number.
+         // But this time it's better LOL 
+          function largestOfFour(arr) {
+            // You can do this!
+      
+            let max = 0;
+            let newArr = []
+            for (var i = 0; i < arr.length; i++) {
+              for (var j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                  max = arr[i][j]
+                  newArr = arr[i];
+                }
+              }
+            }
+            console.log(max);
+      
+      
+            return newArr;
+          }
+          console.log('result', largestOfFour([
+            [13, 27, 18, 26],
+            [4, 5, 1, 3],
+            [32, 35, 37, 39],
+            [1000, 1001, 857, 1]
+          ]));
 ```
 
-## Return Largest Numbers in Arrays
-Return an array consisting of the largest number from each provided sub-array.
 ```
   //Now it's working, but I show the solution
     // and the main mistake 
     // was the position of
     // sub2.push(max);
-    function largestOfFour(arr) {
+    
+    // Note! In repetition I did it without looking.
+    // It took some time though, but I did it. 
+    
+      // This code is without comments.
+      // In the next one I explain how the loops work.
+      // And then comes the code of the repetition.
+      
+      function largestOfFour(arr) {
       // You can do this!
+
+      var i, j, max = 0;
+      var maxArr = [];
+      for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr[i].length; j++) {
+          if (arr[i][j] > max) {
+            max = arr[i][j];
+          }
+        }
+        maxArr.push(max);
+      }
+      return maxArr;
+    }
+
+    console.log('result ', largestOfFour(
+      [
+        [4, 9, 11, 3],
+        [13, 35, 18, 26],
+        [32, 100, 97, 39],
+        [1000000, 1002221, 857, 1]
+      ]));
+```
+
+```
+    
+    // same code as above but with comments
+    function largestOfFour(arr) {
       // You can do this!
       var i, j, max = 0;
       var maxArr = [];
@@ -161,6 +284,34 @@ Return an array consisting of the largest number from each provided sub-array.
         [32, 100, 97, 39],
         [1000000, 1002221, 857, 1]
       ]));
+```
+
+```
+      // code of repetition
+      function largestOfFour(arr) {
+      // You can do this!
+    
+      let newArr = [];
+      for (var i = 0; i < arr.length; i++) {
+        let max = arr[i][0];
+        for (var j = 0; j < arr[i].length; j++) {
+          if (arr[i][j] > max) {
+            //console.log(max);
+            max = arr[i][j]
+          }
+        }
+        console.log(max);
+        newArr.push(max);
+      }
+    
+      return newArr;
+    }
+    console.log('result', largestOfFour([
+      [13, 27, 18, 26],
+      [4, 5, 1, 3],
+      [32, 35, 37, 39],
+      [1000, 1001, 857, 1]
+    ]));
 ```
 
 ```
