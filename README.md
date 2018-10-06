@@ -3,7 +3,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
 Spool up the FTL drive!
 
 * [Basic Algorithm Scripting](#basicAlgo)
-    * [Find the Longest Word in a String] (#findLongest)
+    * [Find the Longest Word in a String](#findLongest)
     * [Factoralize number](#factoralize)
     * [Reverse string](#reverseString)
     * [Return Largest Numbers in Arrays](#returnL)
