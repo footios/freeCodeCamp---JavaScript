@@ -3,6 +3,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
 Spool up the FTL drive!
 
 * [Basic Algorithm Scripting](#basicAlgo)
+    * [Reverse string](#reverseString)
     * [Return Largest Numbers in Arrays](#returnL)
     * [Confirm Ending](#confirmE)
     * [Repeat a String Repeat a String](#repeatS)
@@ -19,8 +20,44 @@ Spool up the FTL drive!
 
 
 
+# <a name="reverseString"/> Reverse String
 
+```
+  function reverseString(str) {
 
+      let arr = []
+      console.log(str.length);
+      for (var i = str.length; i >= 0; i--) {
+        arr.push(str[i])
+        //console.log(arr);
+      }
+      return arr.join("");
+    }
+    console.log(reverseString("hello"));
+```
+
+```
+//I came up with this one with the help of the hinds
+  function reverseString(str) {
+
+      let arr = [];
+      arr = str.split('');
+      arr.reverse();
+      str = arr.join('');
+      return str;
+      //or just
+      // return str.split('').reverse().join('');
+
+    }
+    console.log(reverseString("Greetings from Earth"));
+```
+FCC Solutions
+
+```
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+```
 
 # <a name="basicAlgo"/> Basic Algorithm Scripting
 
