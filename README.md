@@ -1,5 +1,6 @@
 # freeCodeCamp  Challenges
 Here are my solutions to the challenges. They are not the best, but they show my progression. 
+Spool up the FTL drive!
 
 * [Basic Algorithm Scripting](#basicAlgo)
     * [Return Largest Numbers in Arrays](#returnL)
@@ -13,6 +14,7 @@ Here are my solutions to the challenges. They are not the best, but they show my
     * [Falsy Bouncer](#falsyBouncer)
     * [Where do I belong](#whereBelong)
     * [Mutations](#mutations)
+    * [Chunky Monkey](#chunkyMonkey)
     
 
 
@@ -630,3 +632,149 @@ Or is it because I'm new to programming.
 
     console.log(mutation(["hello", "Heblo"]));
 ```
+
+## <a name= "chunkyMonkey"/>Chunky Monkey
+[FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/)
+
+```
+    // Write a function that splits an array (first argument)
+    // into groups the length of size (second argument)
+    // and returns them as a two-dimensional array.
+    // Yes!!! We did it!
+    function chunkArrayInGroups(arr, size) {
+      // Break it up.
+      let newArr = [];
+      let chop = 0;
+      let monkey = size
+
+      for (var i = 0; i < arr.length; i++) {
+
+        if (monkey < arr.length) {
+          newArr.push(arr.slice(chop, monkey));
+          console.log(chop, ' ', monkey);
+          chop += size;
+          monkey = chop + size;
+          i++;
+          console.log(arr.length);
+        } else {
+          newArr.push(arr.slice(chop, arr.length));
+          break;
+        }
+      }
+      return newArr;
+    }
+
+    console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+```
+FCC Solution
+```
+// Nice and simple
+  
+  function chunkArrayInGroups(arr, size) {
+      // Break it up.
+      var arr2 = [];
+      for (var i = 0; i < arr.length; i+=size) {
+    	arr2.push(arr.slice(i , i+size));
+      }
+      return arr2;
+    }
+    
+```
+This FCC Solution is even better
+```
+ function chunkArrayInGroups(arr, size) {
+      // Break it up.
+      var newArr = [];
+      var i = 0;
+
+      while (i < arr.length) {
+        newArr.push(arr.slice(i, i+size));
+        i += size;
+      }
+      return newArr;
+    }
+    chunkArrayInGroups(["a", "b", "c", "d"], 2);
+```
+This piece of code is amazing!
+It just chops off the array until there's nothing left,
+and arr.length is 0.
+I feel stupid.
+```
+  function chunkArrayInGroups(arr, size) {
+      var newArr = [];
+      while (arr.length) {
+        newArr.push(arr.splice(0, size));
+      }
+      return newArr;
+    }
+
+    console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+```
+
+An interesting one from the [forum](https://www.freecodecamp.org/forum/t/help-needed-in-chunky-monkey-problem/31907/4).
+I did put some comments for undestanding.
+
+```
+     function chunkArrayInGroups(arr, size) {
+      var ans = [];
+      var count = 0;
+      // how many times chop the array
+      times = Math.ceil(arr.length / size);
+      //  console.log('times', times);
+
+      // So we need to iterate only two times in this case
+      for (var i = 0; i < times; i++) {
+
+        // temp is going to hold temporarily each choped array.
+        var temp = [];
+        //  console.log('temp =', temp);
+
+        // get each element, according to size
+        // and store it in temp
+        for (var j = 0; j < size; j++) {
+          if (count < arr.length) {
+            temp.push(arr[count]);
+            //  console.log('arr[count] =', arr[count]);
+          }
+          // move to next element
+          count++;
+          //  console.log('count', count);
+          //  console.log(temp);
+        }
+        // push all those broken pieces into another array
+        ans.push(temp);
+      }
+      return ans;
+    }
+
+    console.log(chunkArrayInGroups([0, 1, 68, 87, 8, 5], 4));
+```
+Code with most likes in forum of [FCC](https://www.freecodecamp.org/forum/t/chunky-monkey-under-basic-algorithm-scripting-question/3838/6)
+
+```
+    function chunkArrayInGroups(arr, size) {
+
+      var arraySize = arr.length / size;
+      console.log('arraySize', arraySize);
+
+      var newArray = [];
+
+      for (var i = 0; i < arraySize; i++) {
+
+        var subArray = arr.splice(0, size);
+
+        newArray.push(subArray);
+
+      }
+
+      return newArray;
+
+    }
+
+    console.log(chunkArrayInGroups([0, 1, 68, 87, 8, 5], 4));
+```
+
+
+
+
+    
