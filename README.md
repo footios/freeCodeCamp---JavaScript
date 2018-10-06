@@ -400,6 +400,27 @@ Check if a string (first argument, str) ends with the given target string (secon
     }
     console.log('result ', confirmEnding("Congratulation", "on"));
 ```
+
+```
+// And we did it again, at repetition time.
+// This time using substring function.
+  function confirmEnding(str, target) {
+
+      let str1 = '';
+      str1 = str.substring(str.length - target.length)
+      if (str1 === target) {
+        return true;
+      } else {
+        return false;
+      }
+      console.log(str1);
+    }
+
+    console.log(confirmEnding("Bastian", "tian"));
+
+```
+[Go up](#goUp)
+
 ## <a name="repeatS"/> Repeat a String Repeat a String
 Truncate a string (first argument) 
 if it is longer than the given maximum string length (second argument). 
@@ -428,6 +449,22 @@ Return the truncated string with a ... ending.
     console.log(repeatStringNumTimes("*", 8));
 
 ```
+
+```
+// From the repetition
+  function repeatStringNumTimes(str, num) {
+      // repeat after me
+
+      str1 = '';
+      for (var i = 0; i < num; i++) {
+        str1 += str;
+      }
+      return str1;
+    }
+console.log(repeatStringNumTimes("abc", 3));
+```
+[Go up](#goUp)
+
 ## <a name="truncateS"/> Truncate a String
 ```
   // We need to reduce the length of the string or truncate it 
@@ -439,13 +476,16 @@ Return the truncated string with a ... ending.
     // Truncate a string (first argument) if it is longer
     // than the given maximum string length (second argument).
     // Return the truncated string with a ... ending
+    // Note (from repetiton time): 
+    // This is what happens if you start the wrong way...
     function truncateString(str, num) {
       // Clear out that junk in your trunk
+      
       let temp = '';
-
       temp = str.slice(0, num);
       temp += "..."
       console.log(temp);
+      
       if (str.length <= num) {
         return str;
       } else {
@@ -455,6 +495,25 @@ Return the truncated string with a ... ending.
     console.log('result ', truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
 
 ```
+
+```
+   // This is from the repetition
+  function truncateString(str, num) {
+
+      let str2 = '';
+      str2 = str.slice(0, num);
+      console.log(str2);
+
+      if (str.length <= num) {
+        return str;
+      } else {
+        return str2.concat('...');
+      }
+    }
+    console.log(
+      truncateString("Absolutely Longer", 2));
+```
+[Go up](#goUp)
  
    ## <a name="findK"/>Finders Keepers
     Create a function that looks through an array (first argument)
@@ -488,6 +547,7 @@ Return the truncated string with a ... ending.
       return num % 2 === 0;
     }));
 ```
+[Go up](#goUp)
 
   ## <a name="checkBoolean"/> Boo who. Check if a value is classified as a boolean primitive.
        
@@ -525,8 +585,10 @@ Return the truncated string with a ... ending.
         // test here
         booWho(null);
 ```
+[Go up](#goUp)
 
-## <a name="titleCase"/> Title Case a Sentence [FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence)
+## <a name="titleCase"/> Title Case a Sentence 
+[FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence)
 Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
 
 I got a lot of help from Randell Dawson.
@@ -593,18 +655,19 @@ Second way.
     // result:  Short And Stoutt
 
 ```
-  ## <a name="sliceSplice"/> Slice and Splice
-    You are given two arrays and an index.
-    Use the array methods slice and splice to copy each
-    element of the first array into the second array, in order.
-    Begin inserting elements at index n of the second array.
-    Return the resulting array.
-    The input arrays should remain the same after the function runs.
+[Go up](#goUp)
 
-    First solution (without a hint).
-    But, I found the way to flatten the result array
-    from the internet. 
+  ## <a name="sliceSplice"/> Slice and Splice     
+ You are given two arrays and an index.
+ Use the array methods slice and splice to copy each
+ element of the first array into the second array, in order.
+ Begin inserting elements at index n of the second array.
+ Return the resulting array.
+ The input arrays should remain the same after the function runs.
 
+ First solution (without a hint).
+ But, I found the way to flatten the result array
+ from the internet. 
 ```
     function frankenSplice(arr1, arr2, n) {
       // It's alive. It's alive!
@@ -657,6 +720,7 @@ function frankenSplice(arr1, arr2, n) {
     }
     console.log(frankenSplice([1, 2], ["a", "b"], 1));
 ```
+[Go up](#goUp)
 
   # Falsy Bouncer <a name="falsyBouncer"/> 
     Remove all falsy values from an array.
@@ -686,6 +750,7 @@ function frankenSplice(arr1, arr2, n) {
     }
     console.log('result', bouncer([7, "ate", "", false, 9]));
 ```
+[Go up](#goUp)
 
  ## <a name="whereBelong"/> Where do I Belong [FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/)
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
@@ -765,7 +830,9 @@ Or is it because I'm new to programming.
     console.log(getIndexToIns([2, 5, 10], 15));
     // output 3
 ```
- ## <a name="mutations"/>Mutations   
+[Go up](#goUp)
+
+## <a name="mutations"/>Mutations   
 
 ```
     // Return true if the string in the first element of
