@@ -622,6 +622,24 @@ Here is the topic on the [forum.](https://www.freecodecamp.org/forum/t/title-cas
         console.log('result: ', titleCase("I'm a little tea pot"));
 
 ```
+This is from repetition
+```
+  function titleCase(str) {
+
+      let str1 = str.toLowerCase();
+      let words = str1.split(" ");
+      let titleCasedWords = [];
+
+      for (var i = 0; i < words.length; i++) {
+        titleCasedWords.push(
+          words[i].replace(words[i][0], words[i][0].toUpperCase()));
+      }
+      return titleCasedWords.join(" ");
+    }
+
+    console.log('result', titleCase("sHoRt AnD sToUt"));
+```
+
 Second way. 
 
 ```
@@ -674,7 +692,8 @@ Second way.
       let arr3 = [...arr2];
       let arr4 = [];
     
-      arr3.splice(n, 0, arr1.slice(0))
+      // this is really not needed,as we see later
+      arr3.splice(n, 0, arr1.slice(0)) 
       arr4 = [].concat.apply([], arr3)
       console.log(arr3);
     
@@ -720,6 +739,17 @@ function frankenSplice(arr1, arr2, n) {
     }
     console.log(frankenSplice([1, 2], ["a", "b"], 1));
 ```
+From repetition:
+```
+  function frankenSplice(arr1, arr2, n) {
+
+      let secondArray = [...arr2];
+
+      secondArray.splice(n, 0, ...arr1);
+      
+      return secondArray;
+    }
+```
 [Go up](#goUp)
 
   # Falsy Bouncer <a name="falsyBouncer"/> 
@@ -752,7 +782,8 @@ function frankenSplice(arr1, arr2, n) {
 ```
 [Go up](#goUp)
 
- ## <a name="whereBelong"/> Where do I Belong [FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/)
+ ## <a name="whereBelong"/> Where do I Belong 
+[FCC Solutions](https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/)
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
 For ex. getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
 There are more siple solutions in FCC/
