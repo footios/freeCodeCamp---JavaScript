@@ -787,7 +787,7 @@ From repetition:
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
 For ex. getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
 There are more siple solutions in FCC/
-I always try to hard to be smart, I quess.
+I always try too hard to be smart, I quess.
 Or is it because I'm new to programming.
    
 ```
@@ -824,6 +824,50 @@ Or is it because I'm new to programming.
     console.log(getIndexToIns([2, 5, 10], 15));
     output: 3
     ```
+   Above code with logs
+   ```
+       function getIndexToIns(arr, num) {
+      // Find my place in this sorted array.
+      // Found a way in stackOverflow to sort an array in a for loop
+      let output = [];
+      for (var i = 0; i < arr.length; i++) {
+        console.log('i , j:', i, j);
+        for (var j = 0; j < i; j++) { // first time see this
+          console.log('i, j, 2:', i, j);
+          console.log('arr 1:', arr);
+
+          if (arr[i] < arr[j]) {
+            console.log('arr[i], arr[j]', arr[i], ' ', arr[j]);
+            var temp = arr[i]; // very nice trick the rest
+            console.log('arr 2:', arr);
+            console.log('temp', temp);
+            arr[i] = arr[j];
+            console.log('arr 3:', arr);
+            console.log('arr[i]', arr[i]);
+            arr[j] = temp
+            console.log('arr[j]', arr[j]);
+            console.log('arr 4:', arr);
+          }
+        }
+        //  console.log(arr);
+      }
+      // get the index of num
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < num) {
+          output.push(arr[i]);
+        } else {
+          output.push(num)
+        }
+      }
+      if (output.indexOf(num) === -1) {
+        output.push(num)
+      }
+
+      return output.indexOf(num);
+    }
+
+    console.log('result', getIndexToIns([40, 70, 60, ], 50));
+   ```
     
     ```
       // using the sort method
@@ -861,6 +905,23 @@ Or is it because I'm new to programming.
     console.log(getIndexToIns([2, 5, 10], 15));
     // output 3
 ```
+FCC Solution
+This is the "out of the box" thinking solution.
+```
+function getIndexToIns(arr, num) {
+      // Find my place in this sorted array.
+      var times = arr.length; // runs the for loop once for each thing in the array
+      var count = 0;
+      for (var i = 0; i < times; i++) {
+        if (num > arr[i]) {
+          count++;
+        }
+      } // counts how many array numbers are smaller than num
+      return count; // the above equals num's position in a sorted array
+    }
+
+    console.log('result', getIndexToIns([40, 70, 60, 45], 50));
+```
 [Go up](#goUp)
 
 ## <a name="mutations"/>Mutations   
@@ -874,6 +935,7 @@ Or is it because I'm new to programming.
     // in the first, ignoring case.
 
     // I DID AGAIN !!!
+    // I did got a hint from stackoverflow to use toUpperCase.
     function mutation(arr) {
 
       let arr1 = [...arr[0]];
@@ -921,6 +983,28 @@ Or is it because I'm new to programming.
 
     console.log(mutation(["hello", "Heblo"]));
 ```
+Code from repetition.
+It seems like I start thinking like a normal programmer.
+Nevertheles it may be interesting the way I solved it the first time,
+eventhough it took a lot of code.
+
+```
+    function mutation(arr) {
+
+      let firstArray = arr[0].toLowerCase();
+      let secondArray = arr[1].toLowerCase();
+
+      let indexBoolean = true;
+      for (var j = 0; j < secondArray.length; j++) {
+        if (firstArray.indexOf(secondArray[j]) === -1) {
+          return false;
+        }
+      }
+      return indexBoolean;
+    }
+    console.log(mutation(["hello", "hel"]));
+    
+```
 [Go up](#goUp)
 
 ## <a name= "chunkyMonkey"/>Chunky Monkey. 
@@ -953,7 +1037,7 @@ Or is it because I'm new to programming.
           monkey = chop + size;
           console.log(arr.length);
 
-          // if the second value of slice if bigger than the
+          // if the second value of slice is bigger than the
           // arr.length, then use the arr.length
         } else {
           newArr.push(arr.slice(chop, arr.length));
@@ -1013,7 +1097,8 @@ I feel stupid.
     console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
 ```
 
-An interesting one from the forum. [Click here to check the post](https://www.freecodecamp.org/forum/t/help-needed-in-chunky-monkey-problem/31907/4).
+An interesting one from the forum. 
+[Click here to check the post](https://www.freecodecamp.org/forum/t/help-needed-in-chunky-monkey-problem/31907/4).
 I did put some comments for undestanding.
 
 ```
@@ -1051,7 +1136,8 @@ I did put some comments for undestanding.
 
     console.log(chunkArrayInGroups([0, 1, 68, 87, 8, 5], 4));
 ```
-Code with most likes in forum of FCC [Click here to check the post](https://www.freecodecamp.org/forum/t/chunky-monkey-under-basic-algorithm-scripting-question/3838/6)
+Code with most likes in forum of FCC 
+[Click here to check the post](https://www.freecodecamp.org/forum/t/chunky-monkey-under-basic-algorithm-scripting-question/3838/6)
 
 ```
     function chunkArrayInGroups(arr, size) {
@@ -1074,6 +1160,24 @@ Code with most likes in forum of FCC [Click here to check the post](https://www.
     }
 
     console.log(chunkArrayInGroups([0, 1, 68, 87, 8, 5], 4));
+```
+Code from repetition.
+It looks like the FCC solution.
+I'm not sure why.
+Is it because I kind of could remeber it, or is it because I start thinking this way?
+I think it's the second.
+
+```
+  function chunkArrayInGroups(arr, size) {
+      // Break it up.
+      let _2DArray = []
+      for (var i = 0; i < arr.length; i += size) {
+        _2DArray.push(arr.slice(i, i + size));
+      }
+      return _2DArray;
+    }
+
+    console.log(chunkArrayInGroups([0, 1, 3, 2, 3, 3, 4, 5], 3));
 ```
 [Go up](#goUp)
 
