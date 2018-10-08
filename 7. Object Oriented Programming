@@ -1,0 +1,27 @@
+# freeCodeCamp  Challenges <a name="goUp"/>
+(2018 / September - October)
+Here are my solutions to the challenges. 
+They are not the best solutions, but they show my progress.
+Note. Here come only the challenges I've found hard to pass. 
+Spool up the FTL drive!
+
+* [6. Basic Algorithm Scripting](#basicAlgo)
+    * [Find the Longest Word in a String](#findLongest)
+    * [Factoralize number](#factoralize)
+    * [Reverse string](#reverseString)
+    * [Return Largest Numbers in Arrays](#returnL)
+    * [Confirm Ending](#confirmE)
+    * [Repeat a String Repeat a String](#repeatS)
+    * [Truncate a String](#truncateS) 
+    * [Finders Keepers](#findK)
+    * [Check for boolean](#checkBoolean)
+    * [Title Case a Sentence](#titleCase)
+    * [Slice and Splice](#sliceSplice)
+    * [Falsy Bouncer](#falsyBouncer)
+    * [Where do I belong](#whereBelong)
+    * [Mutations](#mutations)
+    * [Chunky Monkey](#chunkyMonkey)
+    
+ * [7. Object Oriented Programming](#objOO)
+     
+     Create a Basic JavaScript Object
