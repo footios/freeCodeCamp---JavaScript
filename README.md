@@ -1,8 +1,11 @@
 # freeCodeCamp  Challenges <a name="goUp"/>
-Here are my solutions to the challenges. They are not the best, but they show my progression. 
+(2018 / September - October)
+Here are my solutions to the challenges. 
+They are not the best solutions, but they show my progress.
+Note. Here come only the challenges I've found hard to pass. 
 Spool up the FTL drive!
 
-* [Basic Algorithm Scripting](#basicAlgo)
+* [6. Basic Algorithm Scripting](#basicAlgo)
     * [Find the Longest Word in a String](#findLongest)
     * [Factoralize number](#factoralize)
     * [Reverse string](#reverseString)
@@ -19,11 +22,11 @@ Spool up the FTL drive!
     * [Mutations](#mutations)
     * [Chunky Monkey](#chunkyMonkey)
     
+ * [7. Object Oriented Programming](#objOO)
+     
+     Create a Basic JavaScript Object
+    
 # <a name="basicAlgo"/> Basic Algorithm Scripting
-
-
-
-
 ## <a name="factoralize"/> Factoralize number
 ```
   
